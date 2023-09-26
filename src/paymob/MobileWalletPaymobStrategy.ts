@@ -5,7 +5,7 @@ export default class MobileWalletPaymobStrategy extends PaymobStrategy {
     integrationId: string;
     constructor() {
         super();
-        this.integrationId = process.env.PAYMOB_CREDIT_CARD_INTEGRATION_ID!;
+        this.integrationId = process.env.PAYMOB_MOBILE_WALLET_INTEGRATION_ID!
     }
     async getPaymentKey(user: User, amount: number): Promise<PaymobPayload> {
         let { orderId, token } = await this.createPayment(user, amount)
