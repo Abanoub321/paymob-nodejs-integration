@@ -7,6 +7,7 @@ This guide demonstrates a modular and efficient approach to using the PayMob lib
 - [Introduction](#introduction)
 - [Usage](#usage)
 - [Environment Variables](#environment-variables)
+- [Webhook Callback](#webhook-callback)
 - [Issues](#issues)
 
 ## Introduction
@@ -29,6 +30,13 @@ PAYMOB_CREDIT_CARD_INTEGRATION_ID
 PAYMOB_CREDIT_CARD_INTEGRATION_ID
 PAYMOB_MOBILE_WALLET_INTEGRATION_ID
 ```
+
+## Webhook Callback
+
+ Paymob uses webhook callbacks to notify you of the status of the payment. You can set the webhook callback url in paymob dashboard.
+ For testing purposes, you can use [ngrok](https://ngrok.com/) to create a tunnel to your localhost. You can then use the generated url as the webhook callback url as mentioned in the [official documentation](https://docs.paymob.com/docs/transaction-webhooks).
+
+ You can check the webhook callback example in the router file `src/routes/paymobRouter.ts`.
 
 ## Issues
 
